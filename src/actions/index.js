@@ -1,6 +1,7 @@
 export const ACTIONS = {
   INCREMENT: 'increment',
-  DECREMENT: 'decrement'
+  DECREMENT: 'decrement',
+  SETLOG: 'log-in/out',
 }
 
 export const increment = (number) => {
@@ -15,6 +16,15 @@ export const increment = (number) => {
 export const decrement = () => {
   return {
     type: ACTIONS.DECREMENT
+  }
+}
+
+export const setLog = (curr) => {
+  return {
+    type: ACTIONS.SETLOG,
+    paylaod: {
+      status: curr
+    }
   }
 }
 

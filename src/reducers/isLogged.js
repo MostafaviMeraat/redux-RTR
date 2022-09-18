@@ -1,7 +1,9 @@
+import { ACTIONS } from "../actions"
+
 const loggedReducer = (state = false, action) => {
   switch (action.type) {
-    case 'sign_in':
-      return !true
+    case ACTIONS.SETLOG:
+      return !state
     default: return state
   }
 }
